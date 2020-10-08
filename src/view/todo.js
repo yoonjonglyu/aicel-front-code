@@ -7,11 +7,12 @@ const Todo = (props) => {
         todoList,
         todoValue,
         handleToDo,
-        addToDo
+        addToDo,
+        removeToDo
     } = props;
-    
+
     const todoItem = todoList.map((obj, index) => {
-        return (<li data-id={obj.idx} key={index}>{obj.todo}</li>)
+        return (<li key={index}>{obj.todo} <button onClick={() => {removeToDo(index)}}>-</button></li>)
     });
 
     return (
