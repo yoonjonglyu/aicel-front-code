@@ -10,10 +10,20 @@ const Todo = (props) => {
         addToDo,
         removeToDo
     } = props;
+    let todoForm;
 
     const todoItem = todoList.map((obj, index) => {
         return (<li key={index}>{obj.todo} <button onClick={() => {removeToDo(index)}}>-</button></li>)
     });
+    
+    if(todoList.length > 4){
+        todoForm = <p>The list is full.</p>
+    } else {
+        todoForm =  <form className="todo-from" onSubmit={addToDo}>
+                        <input type="text" value={todoValue} onChange={handleToDo} />
+                        <button>+</button>
+                    </form>
+    }
 
     return (
         <Layout>
@@ -24,10 +34,7 @@ const Todo = (props) => {
                         {todoItem}
                     </ul>
                 </div>
-                <form className="todo-from" onSubmit={addToDo}>
-                    <input type="text" value={todoValue} onChange={handleToDo} />
-                    <button>+</button>
-                </form>
+                    {todoForm}
             </div>
         </Layout>
     )
