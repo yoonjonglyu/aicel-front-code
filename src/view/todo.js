@@ -20,7 +20,7 @@ const Todo = (props) => {
         todoForm = <p>The list is full.</p>
     } else {
         todoForm =  <form className="todo-from" onSubmit={addToDo}>
-                        <input type="text" value={todoValue} onChange={handleToDo} />
+                        <input type="text" value={todoValue} onChange={handleToDo} placeholder="What needs to be done?"/>
                         <button>+</button>
                     </form>
     }
