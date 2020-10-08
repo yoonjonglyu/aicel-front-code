@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Todo from './view/todo';
+import Todo from './controller/todo';
 import Grid from './view/Grid';
 import Modals from './view/modals';
 import Counter from './view/counter';
