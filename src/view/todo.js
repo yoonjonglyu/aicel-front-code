@@ -3,7 +3,13 @@ import React from 'react';
 import Layout from '../components/layout';
 
 const Todo = (props) => {
-    const { todoList } = props;
+    const {
+        todoList,
+        todoValue,
+        handleToDo,
+        addToDo
+    } = props;
+    
     const todoItem = todoList.map((obj, index) => {
         return (<li data-id={obj.idx} key={index}>{obj.todo}</li>)
     });
@@ -17,8 +23,8 @@ const Todo = (props) => {
                         {todoItem}
                     </ul>
                 </div>
-                <form className="todo-from">
-                    <input type="text" />
+                <form className="todo-from" onSubmit={addToDo}>
+                    <input type="text" value={todoValue} onChange={handleToDo} />
                     <button>+</button>
                 </form>
             </div>
