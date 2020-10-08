@@ -1,7 +1,7 @@
 {
-  "name": "webpack-init-template",
+  "name": "aicel-front-code",
   "version": "1.0.0",
-  "description": "> 기본 환경 템플릿",
+  "description": "react.js, react-router, 상태 관리 라이브러리를 제외하고 나머지는 순수 JS, CSS로 과제.",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --env.env=dev",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yoonjonglyu/webpack-init-template.git"
+    "url": "git+https://github.com/yoonjonglyu/aicel-front-code.git"
   },
   "keywords": [
     "webpack"
@@ -20,9 +20,9 @@
   "author": "ISA",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yoonjonglyu/webpack-init-template/issues"
+    "url": "https://github.com/yoonjonglyu/aicel-front-code/issues"
   },
-  "homepage": "https://github.com/yoonjonglyu/webpack-init-template#readme",
+  "homepage": "https://github.com/yoonjonglyu/aicel-front-code#readme",
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
     "react": "^16.13.1",
