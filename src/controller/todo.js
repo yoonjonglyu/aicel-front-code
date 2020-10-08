@@ -7,7 +7,7 @@ import TodoModel from '../models/todoModel';
 import TodoView from '../view/todo';
 
 const Todo = () => {
-    const [todoList] = useState(TodoModel.getTodo);
+    const [todoList, setList] = useState(TodoModel.getTodo);
     const [todo, setToDo] = useState('');
 
     const handleToDo = (e) => {
@@ -16,16 +16,24 @@ const Todo = () => {
     const handleAdd = (e) => {
       e.preventDefault();
       const result = {
-        "idx": todoList.length,
+        "idx": todoList.length > 0 ? todoList[todoList.length - 1].idx : 0,
         "todo" : todo
       }
 
       if(todo.split(' ').join('').length > 0){
-        todoList.push(result);
-        todoModel.saveTodo(todoList);
+        const state = Array.from(todoList);
+        state.push(result);
+        todoModel.saveTodo(state);
+        setList(state);
         setToDo('');
       }
     };
+    const handleReMove = (target) => {
+      const state = Array.from(todoList);
+      state.splice(target, 1);
+      todoModel.saveTodo(state);
+      setList(state);
+    }
 
     return (
         <TodoView 
@@ -33,6 +41,7 @@ const Todo = () => {
         todoValue = {todo}
         handleToDo = {handleToDo}
         addToDo = {handleAdd}
+        removeToDo = {handleReMove}
         />
     )
 };
