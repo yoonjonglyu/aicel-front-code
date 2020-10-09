@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Todo from './controller/todo';
-import Grid from './view/Grid';
+import Grid from './controller/grid';
 import Modals from './view/modals';
 import Counter from './view/counter';
 import Async from './view/async';
