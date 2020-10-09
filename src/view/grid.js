@@ -6,18 +6,20 @@ const Grid = (props) => {
     const {
         dataTable,
         keyword,
-        handleKeyword
+        handleKeyword,
+        tableSort,
+        handleSort
     } = props;
-    
+
     const gridData = dataTable.map((obj, index) => {
     return (<tr key={index}>
-        <td>
+        <td className={tableSort[0].isAvail}>
             {obj.name}
         </td>
-        <td>
+        <td className={tableSort[1].isAvail}>
             {obj.age}
         </td>
-        <td>
+        <td className={tableSort[2].isAvail}>
             {obj.weight}
         </td>
     </tr>)
@@ -34,14 +36,14 @@ const Grid = (props) => {
                     <table>
                         <thead>
                             <tr>
-                                <th>
-                                    name<span>-</span>
+                                <th className={tableSort[0].isAvail}>
+                                    name<span onClick={() => {handleSort(0)}}>-</span>
                                 </th>
-                                <th>
-                                    age<span>-</span>
+                                <th className={tableSort[1].isAvail}>
+                                    age<span onClick={() => {handleSort(1)}}>-</span>
                                 </th>
-                                <th>
-                                    weight<span>-</span>
+                                <th className={tableSort[2].isAvail}>
+                                    weight<span onClick={() => {handleSort(2)}}>-</span>
                                 </th>
                             </tr>
                         </thead>
