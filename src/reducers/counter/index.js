@@ -9,12 +9,12 @@ const counter = (state = initialState, action) => {
         case types.INCREMENT :
             return {
                 ...state,
-                counter : state.counter + 1
+                counter : state.counter + 1  < 10 ? state.counter + 1 : state.counter
             };
         case types.DECREMENT :
             return {
                 ...state,
-                counter : state.counter - 1
+                counter : state.counter - 1 >= 0 ? state.couner - 1 : state.counter
             };
         default :
             return state;
