@@ -13,14 +13,26 @@ const Counter = (props) => {
         decrement
     } = props;
     const [countTitle, setTitle] = useState(CounterModel.getTitle());
+    const [countDelay, setDelay] = useState(false);
 
     const handleIncrement = () => {
-        increment();
-        setTitle(CounterModel.getTitle('+'));
+        if(countDelay === false && count < 9){
+            increment();
+            setTitle(CounterModel.getTitle('+'));
+            setDelay(true);
+            setTimeout(clearDelay, 1000)
+        }
     }
     const handleDecrement = () => {
-        decrement();
-        setTitle(CounterModel.getTitle('-'));
+        if(countDelay === false && count > 0){
+            decrement();
+            setTitle(CounterModel.getTitle('-'));
+            setDelay(true);
+            setTimeout(clearDelay, 1000)
+        }
+    }
+    const clearDelay = () => {
+        setDelay(false);
     }
 
     return (
