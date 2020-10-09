@@ -9,15 +9,27 @@ const Counter = (props) => {
         handleIncrement,
         handleDecrement
     } = props;
+    
+    let addBtn, subtrBtn;
+    if(count < 9){
+        addBtn = (<button onClick={handleIncrement} >+</button>);
+    } else {
+        addBtn = (<button onClick={handleIncrement} disabled>+</button>);
+    }
+    if(count > 0){
+        subtrBtn = (<button onClick={handleDecrement}>-</button>);
+    } else {
+        subtrBtn = (<button onClick={handleDecrement} disabled>-</button>);
+    }
 
     return (
         <Layout>
             <div className="counter-contents">
                 <h2>Counter</h2>
                 <div className="counter-box">
-                    <button onClick={handleIncrement}>+</button>
+                    {addBtn}
                     <strong>{count}</strong>
-                    <button onClick={handleDecrement}>-</button>
+                    {subtrBtn}
                 </div>
                 <section className="title">
                     <p>
