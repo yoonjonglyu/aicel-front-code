@@ -5,7 +5,7 @@ import Todo from './controller/todo';
 import Grid from './controller/grid';
 import Modals from './controller/modals';
 import Counter from './controller/counter';
-import Async from './view/async';
+import Async from './controller/async';
 import NotFound from './view/notfound';
 
 const App = () => {
