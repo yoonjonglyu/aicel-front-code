@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
                 </article>
             </main>
             <footer id="footer">
-                <p>Copyright &#169;ISA all right reserved.</p>
+                <small>Copyright &#169;ISA all right reserved.</small>
             </footer>
         </div>
     );
