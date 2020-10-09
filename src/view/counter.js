@@ -2,15 +2,21 @@ import React from 'react';
 
 import Layout from '../components/layout';
 
-const Counter = () => {
+const Counter = (props) => {
+    const {
+        count,
+        handleIncrement,
+        handleDecrement
+    } = props;
+
     return (
         <Layout>
             <div className="counter-contents">
                 <h2>Counter</h2>
                 <div className="counter-box">
-                    <button>+</button>
-                    <strong>0</strong>
-                    <button>-</button>
+                    <button onClick={handleIncrement}>+</button>
+                    <strong>{count}</strong>
+                    <button onClick={handleDecrement}>-</button>
                 </div>
                 <section className="title">
                     <p>
