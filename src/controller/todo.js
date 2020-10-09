@@ -14,23 +14,17 @@ const Todo = () => {
     };
     const handleAdd = (e) => {
       e.preventDefault();
-      const result = {
-        "idx": todoList.length > 0 ? todoList[todoList.length - 1].idx : 0,
-        "todo" : todo
-      }
 
       if(todo.split(' ').join('').length > 0){
-        const state = Array.from(todoList);
-        state.push(result);
-        TodoModel.saveTodo(state);
+        const state = TodoModel.saveTodo(todoList, todo);
+
         setList(state);
         setToDo('');
       }
     };
     const handleReMove = (target) => {
-      const state = Array.from(todoList);
-      state.splice(target, 1);
-      TodoModel.saveTodo(state);
+      const state = TodoModel.removeTodo(todoList, target);
+      
       setList(state);
     }
 
