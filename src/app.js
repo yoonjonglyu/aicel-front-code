@@ -4,7 +4,7 @@ import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import Todo from './controller/todo';
 import Grid from './controller/grid';
 import Modals from './controller/modals';
-import Counter from './view/counter';
+import Counter from './controller/counter';
 import Async from './view/async';
 import NotFound from './view/notfound';
 
