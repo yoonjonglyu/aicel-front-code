@@ -1,3 +1,4 @@
+import { data } from 'autoprefixer';
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
@@ -6,9 +7,12 @@ import GridModel from '../models/gridModel';
 import GridView from '../view/grid';
 
 const Grid = () => {
+    const [dataList, setDataList] = useState(GridModel.getData());
 
     return (
-        <GridView />
+        <GridView 
+        dataTable = {dataList}
+        />
     )
 };
 
