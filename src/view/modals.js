@@ -2,22 +2,34 @@ import React from 'react';
 
 import Layout from '../components/layout';
 
-const Modals = () => {
+const Modals = (props) => {
+    const {
+        isAvail,
+        headLine,
+        contents,
+        handleShow,
+        handleHide
+    } = props;
+    
+    const modal = isAvail ? (
+        <section className="modal">
+            <div className="modal-wrapper">
+                <div className="modal-container">
+                    <h3>{headLine}</h3>
+                    <p>{contents}</p>
+                    <button onClick={handleHide}>OK</button>
+                </div>
+            </div>
+        </section>
+    ) : '';
+
     return (
         <Layout>
             <div className="modals-contents">
                 <h2>Modals</h2>
-                <button>Show Modal</button>
+                <button onClick={handleShow}>Show Modal</button>
                 <div className="modal-box">
-                    <section className="modal">
-                        <div className="modal-wrapper">
-                            <div className="modal-container">
-                                <h3>Modal Header</h3>
-                                <p>Modal Body</p>
-                                <button>OK</button>
-                            </div>
-                        </div>
-                    </section>
+                    {modal}
                 </div>
             </div>
         </Layout>
