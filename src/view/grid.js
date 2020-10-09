@@ -4,9 +4,11 @@ import Layout from '../components/layout';
 
 const Grid = (props) => {
     const {
-        dataTable
+        dataTable,
+        keyword,
+        handleKeyword
     } = props;
-
+    
     const gridData = dataTable.map((obj, index) => {
     return (<tr key={index}>
         <td>
@@ -26,7 +28,7 @@ const Grid = (props) => {
             <div className="grid-contents">
                 <h2>Grid</h2>
                 <div className="search-box">
-                    <input type="text" id="search" maxLength="10" placeholder="Please enter keywords" />
+                    <input type="text" id="search" maxLength="10" placeholder="Please enter keywords"  value={keyword} onChange={handleKeyword} />
                 </div>
                 <div className="grid-box">
                     <table>
