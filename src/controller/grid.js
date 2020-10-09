@@ -13,10 +13,8 @@ const Grid = () => {
         const keyword = e.target.value;
         setKeyword(keyword);
 
-        if(keyword.length > 0){
-            const state = GridModel.searchData(GridModel.getData(), keyword);
-            setDataList(state);
-        }
+        const state = GridModel.searchData(GridModel.getData(), keyword);
+        setDataList(state);
     }
 
     return (
