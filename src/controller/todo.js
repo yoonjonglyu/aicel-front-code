@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import todoModel from '../models/todoModel';
 
 import TodoModel from '../models/todoModel'; 
 
@@ -23,7 +22,7 @@ const Todo = () => {
       if(todo.split(' ').join('').length > 0){
         const state = Array.from(todoList);
         state.push(result);
-        todoModel.saveTodo(state);
+        TodoModel.saveTodo(state);
         setList(state);
         setToDo('');
       }
@@ -31,7 +30,7 @@ const Todo = () => {
     const handleReMove = (target) => {
       const state = Array.from(todoList);
       state.splice(target, 1);
-      todoModel.saveTodo(state);
+      TodoModel.saveTodo(state);
       setList(state);
     }
 
