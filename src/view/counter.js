@@ -5,6 +5,7 @@ import Layout from '../components/layout';
 const Counter = (props) => {
     const {
         count,
+        title,
         handleIncrement,
         handleDecrement
     } = props;
@@ -21,7 +22,7 @@ const Counter = (props) => {
                 <section className="title">
                     <p>
                         <span>Count title</span> :
-                        <strong className="title-name">waiting...</strong>
+                        <strong className="title-name">{title}</strong>
                     </p>
                 </section>
             </div>
