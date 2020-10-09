@@ -12,17 +12,21 @@ const Counter = (props) => {
         increment,
         decrement
     } = props;
+    const [countTitle, setTitle] = useState(CounterModel.getTitle());
 
     const handleIncrement = () => {
         increment();
+        setTitle(CounterModel.getTitle('+'));
     }
     const handleDecrement = () => {
         decrement();
+        setTitle(CounterModel.getTitle('-'));
     }
 
     return (
         <CounterView 
         count = {count}
+        title = {countTitle}
         handleIncrement = {handleIncrement}
         handleDecrement = {handleDecrement}
         />
