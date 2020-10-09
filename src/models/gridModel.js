@@ -7,7 +7,7 @@ const getData = (list) => {
         ["Lee", 30, 88],
         ["Chuck", 17, 75],
         ["Ralph", 41, 69],
-        ["mark", 25, 80]
+        ["Mark", 25, 80]
     ];
 
     data.forEach((arr) => {
@@ -40,7 +40,75 @@ const searchData = (dataList, keyword) => {
     return result;
 }
 
+const getSortData = (list) => {
+    const state = list ? list : [
+        {
+            "isAvail" : '',
+            "sort" : false,
+        },
+        {
+            "isAvail" : '',
+            "sort" : false,
+        },
+        {
+            "isAvail" : '',
+            "sort" : false,
+        }
+    ];
+
+    const result = state.map((obj) => {
+        obj.isAvail = '';
+
+        return obj;
+    })
+
+    return result;
+}
+
+const setSortOrder = (order) => {
+    let result;
+    if(order === "asc"){
+        result = "desc";
+    } else {
+        result = "asc";
+    }
+
+    return result;
+}
+
+const dataSort = (dataList, sortList) => {
+    const result = Array.from(dataList);
+    for(let int = 0; int < sortList.length; int++){
+        if(sortList[int].isAvail === "active") {
+            const keys = Object.keys(result[0]);
+            const keyName = keys[int]
+            const sort = sortList[int].sort;
+            result.sort((a, b) => {
+                let resultA, resultB;
+                if(sort === "desc") {
+                    resultA = 1;
+                    resultB = -1;
+                } else {
+                    resultA = -1;
+                    resultB = 1;
+                }
+
+               if(a[keyName] > b[keyName]){
+                    return resultA;
+               } else if(a[keyName] < b[keyName]){
+                   return resultB;
+               }
+            });
+        }
+    }
+
+    return result;
+}
+
 gridModel.getData = getData;
 gridModel.searchData = searchData;
+gridModel.getSort = getSortData;
+gridModel.setOrder = setSortOrder;
+gridModel.dataSort = dataSort;
 
 export default gridModel;
