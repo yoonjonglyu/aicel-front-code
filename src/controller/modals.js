@@ -11,6 +11,8 @@ const Modals = () => {
     const [modalBody, setBody] = useState('');
     
     const handleShow = () => {
+        setHead(ModalsModel.getHead(''));
+        setBody(ModalsModel.getBody(''));
         setAvail(true);
     }
     const handleHide = () => {
