@@ -23,6 +23,24 @@ const getData = (list) => {
     return result;
 }
 
+const searchData = (dataList, keyword) => {
+    const state = Array.from(dataList);
+    const result = state.filter((obj) => {
+        let check = false;
+        if(obj.name.includes(keyword)){
+            check = true;
+        } else if(obj.age.toString().includes(keyword)){
+            check = true;
+        } else if(obj.weight.toString().includes(keyword)){
+            check = true;
+        }
+        
+        return check;
+    })
+    return result;
+}
+
 gridModel.getData = getData;
+gridModel.searchData = searchData;
 
 export default gridModel;
