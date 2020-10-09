@@ -5,7 +5,6 @@ import Layout from '../components/layout';
 const async = (props) => {
     const {
         isRes,
-        asyncTarget,
         asyncData,
         handleCity
     } = props;

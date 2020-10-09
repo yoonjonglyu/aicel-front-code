@@ -30,7 +30,6 @@ const Async = () => {
     return (
       <AsyncView 
       isRes = {res}
-      asyncTarget = {city}
       asyncData = {asyncData}
       handleCity = {handleCity}
       />
