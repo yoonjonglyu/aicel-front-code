@@ -10,7 +10,7 @@ import NotFound from './view/notfound';
 
 const App = () => {
     return (
-        <Router>
+        <Router basename="/aicel-front-code">
             <Switch>
                 <Route exact path="/" component={Todo} />
                 <Route exact path="/grid" component={Grid} />
