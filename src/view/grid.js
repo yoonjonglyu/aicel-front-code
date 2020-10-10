@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Layout from '../components/layout';
+import '../assets/css/grid.css';
 
 const Grid = (props) => {
     const {
@@ -37,13 +38,13 @@ const Grid = (props) => {
                         <thead>
                             <tr>
                                 <th className={tableSort[0].isAvail}>
-                                    name<span onClick={() => {handleSort(0)}}>-</span>
+                                    name<span className={tableSort[0].sort} onClick={() => {handleSort(0)}}></span>
                                 </th>
                                 <th className={tableSort[1].isAvail}>
-                                    age<span onClick={() => {handleSort(1)}}>-</span>
+                                    age<span className={tableSort[1].sort} onClick={() => {handleSort(1)}}></span>
                                 </th>
                                 <th className={tableSort[2].isAvail}>
-                                    weight<span onClick={() => {handleSort(2)}}>-</span>
+                                    weight<span className={tableSort[2].sort} onClick={() => {handleSort(2)}}></span>
                                 </th>
                             </tr>
                         </thead>
