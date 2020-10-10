@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+.grid-contents {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 24px 0 0 0;
+}
+.grid-contents h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.grid-contents .search-box {
+    display: block;
+    width : 100%;
+    height: auto;
+    margin: 24px auto;
+}
+.search-box input {
+    width: 14rem;
+    height: 2.5rem;
+    padding: 0 0 0 4px;
+    font-size: 1rem;
+}
+.grid-box {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.grid-box table {
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+}
+.grid-box table tr {
+    width: 100%;
+    height: auto;
+}
+.grid-box table th {
+    height: auto;
+    padding: 10px;
+    border-right: 1px white solid;
+}
+.grid-box table .active {
+    color: rgb(179, 49, 49);
+}
+.grid-box table th span {
+    display: inline-block;
+    width : 0;
+    height: 0;
+    margin-left: 5px;
+    cursor : pointer;
+    vertical-align: middle;
+}
+.grid-box table th .asc {
+    border-bottom: white 4px solid;
+    border-left : transparent 4px solid;
+    border-right : transparent 4px solid;
+}
+.grid-box table th .desc {
+    border-top: white 4px solid;
+    border-left : transparent 4px solid;
+    border-right : transparent 4px solid;
+}
+.grid-box table .active .asc {
+    border-bottom: rgb(179, 49, 49) 4px solid;
+}
+.grid-box table .active .desc {
+    border-top: rgb(179, 49, 49) 4px solid;
+}
+.grid-box table td {
+    height: auto;
+    padding: 10px;
+    border-right: 1px white solid;
+}
+
+.grid-box table thead {
+    width: 100%;
+    height: auto;
+}
+.grid-box table thead tr {
+    background-color: steelblue;
+}
+.grid-box table tbody {
+    width: 100%;
+    height: auto;
+}
+.grid-box table tbody tr {
+    background-color: rgb(139, 198, 247);
+}
+
