@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Layout from '../components/layout';
+import '../assets/css/counter.css';
 
 const Counter = (props) => {
     const {
