@@ -11,6 +11,11 @@
     font-size: 1.5rem;
     font-weight: 700;
 }
+.todo-contents p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
 
 .todo-box {
     display: block;
