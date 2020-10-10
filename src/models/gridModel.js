@@ -44,15 +44,15 @@ const getSortData = (list) => {
     const state = list ? list : [
         {
             "isAvail" : '',
-            "sort" : false,
+            "sort" : "asc",
         },
         {
             "isAvail" : '',
-            "sort" : false,
+            "sort" : "asc",
         },
         {
             "isAvail" : '',
-            "sort" : false,
+            "sort" : "asc",
         }
     ];
 
