@@ -4,6 +4,9 @@
 ## 목적
 > Todo, Grid, Modals, Counter, Async 메뉴 구현하기.
 
+## pages
+- [에이셀 과제](https://yoonjonglyu.github.io/aicel-front-code/ "aicel link")
+
 ## DIR STRUCTURE
 - build 
 > webpack build utils
