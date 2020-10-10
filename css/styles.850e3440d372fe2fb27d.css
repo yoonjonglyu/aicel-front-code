@@ -1,0 +1,465 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+@charset "utf-8";
+
+/** LAYOUT */
+* {
+    box-sizing: border-box;
+}
+.wrap {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.wrap::after {
+    clear: both;
+    content: '';
+}
+#header {
+    display: block;
+    width: 100%;
+    height: 6vh;
+    border-bottom: rgb(78, 3, 3) 1px solid;
+}
+#main {
+    display: block;
+    width: 100%;
+    min-height: 85vh;
+}
+#footer {
+    display: block;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+}
+
+/** header **/
+.header-nav {
+    display: block;
+    width: 100%;
+    height : auto;
+    padding : 12px 0 0 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.header-nav ul {
+    display: block;
+    width: 98%;
+    height: auto;
+    margin: 0 auto;
+    list-style: none;
+}
+.header-nav ul li {
+    display: inline-block;
+    padding: 4px 14px 10px 0;
+}
+.header-nav ul li a {
+    color: unset;
+    text-decoration: none; 
+    transition: color 0.5s ease-in-out;
+}
+.header-nav ul li a:hover {
+    color: red;
+}
+
+/** container **/
+.container {
+    display: block;
+    width: 100%;
+    height : auto;
+    padding: 0 24px 0 24px;
+}
+
+/** footer **/
+#footer small {
+    color: gray;
+}
+@charset "utf-8";
+
+.todo-contents {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 24px 0 0 0;
+}
+.todo-contents h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.todo-contents p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.todo-box {
+    display: block;
+    width:  100%;
+    height: auto;
+    margin: 24px 0;
+    padding: 8px;
+}
+.todo-box .todolist {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-size:  1.2rem;
+    border: rgb(33, 181, 201) 1px solid;
+}
+.todolist li {
+    display: block;
+    width: 98%;
+    height: auto;
+    margin: 8px auto;
+    padding: 4px 12px;
+    border-bottom: rgb(202, 200, 200) 1px dashed;
+}
+.todolist li button {
+    float: right;
+    color: white;
+    font-size: 1rem;
+    background-color: cornflowerblue;
+    border:  rgb(32, 32, 32) 0.5px solid;
+}
+.todo-from {
+    display: block;
+    width: 98%;
+    height: auto;
+    margin: 0 auto;
+    padding: 4px 0;
+}
+.todo-from input {
+    width: 90%;
+    height: 30px;
+    padding: 20px 0;
+    outline: none;
+}
+.todo-from button {
+    width: 8%;
+    height: 44px;
+    margin: 0 0 0 1%;
+    vertical-align: middle;
+    color: white;
+    font-size: 1rem;
+    background-color: chocolate;
+    border: rgb(235, 135, 135) 1px solid;
+}
+@charset "utf-8";
+
+.grid-contents {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 24px 0 0 0;
+}
+.grid-contents h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.grid-contents .search-box {
+    display: block;
+    width : 100%;
+    height: auto;
+    margin: 24px auto;
+}
+.search-box input {
+    width: 14rem;
+    height: 2.5rem;
+    padding: 0 0 0 4px;
+    font-size: 1rem;
+}
+.grid-box {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.grid-box table {
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+}
+.grid-box table tr {
+    width: 100%;
+    height: auto;
+}
+.grid-box table th {
+    height: auto;
+    padding: 10px;
+    border-right: 1px white solid;
+}
+.grid-box table .active {
+    color: rgb(179, 49, 49);
+}
+.grid-box table th span {
+    display: inline-block;
+    width : 0;
+    height: 0;
+    margin-left: 5px;
+    cursor : pointer;
+    vertical-align: middle;
+}
+.grid-box table th .asc {
+    border-bottom: white 4px solid;
+    border-left : transparent 4px solid;
+    border-right : transparent 4px solid;
+}
+.grid-box table th .desc {
+    border-top: white 4px solid;
+    border-left : transparent 4px solid;
+    border-right : transparent 4px solid;
+}
+.grid-box table .active .asc {
+    border-bottom: rgb(179, 49, 49) 4px solid;
+}
+.grid-box table .active .desc {
+    border-top: rgb(179, 49, 49) 4px solid;
+}
+.grid-box table td {
+    height: auto;
+    padding: 10px;
+    border-right: 1px white solid;
+}
+
+.grid-box table thead {
+    width: 100%;
+    height: auto;
+}
+.grid-box table thead tr {
+    background-color: steelblue;
+}
+.grid-box table tbody {
+    width: 100%;
+    height: auto;
+}
+.grid-box table tbody tr {
+    background-color: rgb(139, 198, 247);
+}
+
+
+@charset "utf-8";
+
+.modals-contents {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 24px 0 0 0;
+}
+.modals-contents h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.modals-contents button {
+    display: block;
+    width: 200px;
+    margin: 100px auto;
+    padding: 20px 0;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    outline: none;
+}
+.modals-contents button:hover {
+    background-color: tomato;
+}
+
+.modals-contents .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.modal .modal-wrapper {
+    width : 100%;
+    height: 100%;
+    background-color: rgba(49, 48, 48, 0.5);
+}
+.modal .modal-container {
+    position: fixed;
+    top : 30%;
+    left : 50%;
+    width: 300px;
+    height: 200px;
+    padding: 12px;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 1rem;
+}
+.modal .modal-container h3 {
+    margin: 20px 0;
+    text-align: center;
+    color: tomato;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.modal .modal-container p {
+    text-align: center;
+    font-size: 1rem;
+}
+.modal .modal-container button {
+    width: 100px;
+    margin: 20px auto;
+    padding: 10px 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+@charset "utf-8";
+
+.counter-contents {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 24px 0 0 0;
+}
+.counter-contents h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.counter-contents button {
+    display: inline-block;
+    width: 60px;
+    margin: 80px auto;
+    padding: 12px 0;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+}
+.counter-contents button:hover {
+    background-color: tomato;
+}
+.counter-contents .title {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.counter-box {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.counter-box strong {
+    display: inline-block;
+    width: 100px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+@charset "utf-8";
+
+.async-contents {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 24px 0 0 0;
+}
+.async-contents h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.async-contents .options-box{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 50px auto;
+    text-align: center;
+}
+.options-box button {
+    display: inline-block;
+    width: 100px;
+    margin: 0 10px 0 0;
+    padding: 12px 0;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+}
+.options-box button:hover {
+    background-color: tomato;
+}
+.options-box .active {
+    background-color: tomato;
+}
+
+.async-contents .result-box {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.result-box .info {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 24px auto;
+}
+.result-box .info li {
+    margin: 12px 0;
+}
+.result-box .info li span, .result-box .info li time {
+    color: rgb(43, 196, 43);
+}
+.result-box img {
+    height: 200px;
+}
+
+/*# sourceMappingURL=styles.850e3440d372fe2fb27d.css.map*/
