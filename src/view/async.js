@@ -1,12 +1,14 @@
 import React from 'react';
 
 import Layout from '../components/layout';
+import '../assets/css/async.css';
 
 const async = (props) => {
     const {
         isRes,
         asyncData,
-        handleCity
+        handleCity,
+        checkCity
     } = props;
     
     const asyncResult = isRes === true ? (
@@ -31,10 +33,10 @@ const async = (props) => {
             <div className="async-contents">
                 <h2>Async Actions</h2>
                 <div className="options-box">
-                    <button onClick={() => {handleCity(0)}}>Seoul</button>
-                    <button onClick={() => {handleCity(1)}}>Tokyo</button>
-                    <button onClick={() => {handleCity(2)}}>Beijing</button>
-                    <button onClick={() => {handleCity(3)}}>Toronto</button>
+                    <button className={checkCity[0]} onClick={() => {handleCity(0)}}>Seoul</button>
+                    <button className={checkCity[1]} onClick={() => {handleCity(1)}}>Tokyo</button>
+                    <button className={checkCity[2]} onClick={() => {handleCity(2)}}>Beijing</button>
+                    <button className={checkCity[3]} onClick={() => {handleCity(3)}}>Toronto</button>
                 </div>
                 {asyncResult}
             </div>
